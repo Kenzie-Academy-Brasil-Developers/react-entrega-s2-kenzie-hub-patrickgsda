@@ -15,11 +15,11 @@ function Home() {
   };
   return (
     <Container>
-      <Card elevation={3} sx={{ padding: "20px", maxWidth: "350px" }}>
-        <h1>Kenzie Hub</h1>
+      <Card elevation={3} sx={{ padding: "20px", maxWidth: "400px" }}>
+        <h1>Patrick's Hub</h1>
         <p>
-          Kenzie Hub ajuda você a se conectar com várias pessoas programadoras
-          da Kenzie Academy!
+          Patrick's Hub ajuda você a se conectar com várias pessoas
+          programadoras da Kenzie Academy!
         </p>
         <Content>
           <Button selected="outlined" color="success" onClick={onRegister}>

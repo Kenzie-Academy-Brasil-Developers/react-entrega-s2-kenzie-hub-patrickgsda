@@ -72,7 +72,7 @@ function Register({ authenticated, setAuthenticated }) {
 
   return (
     <Container>
-      <Card elevation={3} sx={{ padding: "20px", maxWidth: "350px" }}>
+      <Card elevation={3} sx={{ padding: "20px", maxWidth: "400px" }}>
         <Box
           component="form"
           sx={{
@@ -88,7 +88,7 @@ function Register({ authenticated, setAuthenticated }) {
           }}
           onSubmit={handleSubmit(onSubmitForm)}
         >
-          <h1>Kenzie Hub</h1>
+          <h1>Patrick's Hub</h1>
 
           <Input
             label="Nome"

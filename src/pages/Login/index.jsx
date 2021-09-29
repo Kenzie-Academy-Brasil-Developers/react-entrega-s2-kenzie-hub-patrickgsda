@@ -3,7 +3,7 @@ import * as yup from "yup";
 import { useHistory, Link, Redirect } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import TextField from "@material-ui/core/TextField";
+import Input from "../../components/Input";
 import Box from "@material-ui/core/Box";
 import Card from "@material-ui/core/Card";
 import { Container } from "./styles";
@@ -32,8 +32,12 @@ function Login({ authenticated, setAuthenticated }) {
       .then((response) => {
         toast.success("Você entrou!");
         const { token } = response.data;
+        const { user } = response.data;
         localStorage.setItem("@KenzieHub:token", JSON.stringify(token));
+        localStorage.setItem("@KenzieHub:user", JSON.stringify(user));
+
         setAuthenticated(true);
+        console.log(user);
         history.push("/logged");
       })
       .catch((err) => {
@@ -48,7 +52,7 @@ function Login({ authenticated, setAuthenticated }) {
   return (
     <Container>
       <Card elevation={3} sx={{ padding: "20px", maxWidth: "350px" }}>
-        <h1>Kenzie Hub</h1>
+        <h1>Patrick's Hub</h1>
         <Box
           component="form"
           sx={{
@@ -64,19 +68,20 @@ function Login({ authenticated, setAuthenticated }) {
           }}
           onSubmit={handleSubmit(onSubmitForm)}
         >
-          <TextField
+          <Input
             label="E-mail"
-            {...register("email")}
+            name="email"
+            register={register}
             error={!!errors.email}
-            helperText={errors.email?.message}
-          ></TextField>
+          ></Input>
 
-          <TextField
+          <Input
             label="Senha"
+            name="password"
             type="password"
-            {...register("password")}
+            register={register}
             error={!!errors.password}
-          ></TextField>
+          ></Input>
 
           <Button selected="outlined" color="primary" type="submit">
             ENTRAR

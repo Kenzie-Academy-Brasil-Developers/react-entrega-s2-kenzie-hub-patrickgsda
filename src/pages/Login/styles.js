@@ -9,7 +9,7 @@ export const Container = styled.div`
 
   h1 {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 15px;
     font-size: 3em;
     font-family: "Merienda", cursive;
     color: darkblue;
