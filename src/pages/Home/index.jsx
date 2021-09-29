@@ -1,7 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router";
 import Button from "../../components/Button";
-import { Container } from "./styles";
+import Card from "@material-ui/core/Paper";
+import { Container, Content } from "./styles";
 
 function Home() {
   const history = useHistory();
@@ -14,8 +15,21 @@ function Home() {
   };
   return (
     <Container>
-      <Button onClick={onRegister}>Registrar</Button>
-      <Button onClick={onLogin}>Login</Button>
+      <Card elevation={3} sx={{ padding: "20px", maxWidth: "350px" }}>
+        <h1>Kenzie Hub</h1>
+        <p>
+          Kenzie Hub ajuda você a se conectar com várias pessoas programadoras
+          da Kenzie Academy!
+        </p>
+        <Content>
+          <Button selected="outlined" color="success" onClick={onRegister}>
+            Registrar
+          </Button>
+          <Button selected="outlined" color="primary" onClick={onLogin}>
+            Entrar
+          </Button>
+        </Content>
+      </Card>
     </Container>
   );
 }
