@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as yup from "yup";
-import { useHistory, Link, Redirect } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Card from "@material-ui/core/Paper";

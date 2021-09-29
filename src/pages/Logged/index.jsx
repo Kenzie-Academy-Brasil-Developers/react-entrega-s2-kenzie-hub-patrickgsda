@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as yup from "yup";
-import { useHistory, Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Container, Content } from "./styles";
@@ -13,7 +13,6 @@ import Box from "@material-ui/core/Box";
 import { toast } from "react-toastify";
 
 function Logged(authenticated) {
-  const history = useHistory();
   const user = JSON.parse(localStorage.getItem("@KenzieHub:user"));
   const [techs, setTechs] = useState([]);
   const [token] = useState(
