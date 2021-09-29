@@ -63,7 +63,6 @@ function Register({ authenticated, setAuthenticated }) {
       .catch((err) => {
         toast.error("Erro ao criar a conta");
       });
-    console.log(user);
   };
 
   if (authenticated) {

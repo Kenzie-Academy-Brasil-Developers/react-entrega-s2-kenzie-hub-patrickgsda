@@ -37,7 +37,6 @@ function Login({ authenticated, setAuthenticated }) {
         localStorage.setItem("@KenzieHub:user", JSON.stringify(user));
 
         setAuthenticated(true);
-        console.log(user);
         history.push("/logged");
       })
       .catch((err) => {

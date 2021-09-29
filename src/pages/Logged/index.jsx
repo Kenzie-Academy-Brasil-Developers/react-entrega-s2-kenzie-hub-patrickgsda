@@ -46,7 +46,6 @@ function Logged(authenticated) {
       })
       .then((data) => {
         toast.success("Tecnologia Adicionada!");
-        console.log(data);
       })
       .catch((_) => toast.error("Tecnologia já está adicionada!"));
   };
